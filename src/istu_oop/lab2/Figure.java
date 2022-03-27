@@ -1,4 +1,4 @@
-package istu_oop_lab2;
+package istu_oop.lab2;
 
 public abstract class Figure {
     private Double area;

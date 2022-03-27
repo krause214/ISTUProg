@@ -1,4 +1,4 @@
-package istu_oop_lab2;
+package istu_oop.lab2;
 
 import java.util.Random;
 

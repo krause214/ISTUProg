@@ -1,4 +1,4 @@
-package istu_oop_java_lab1;
+package istu_oop.lab1;
 
 import java.io.IOException;
 

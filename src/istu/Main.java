@@ -6,24 +6,21 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int[][] matrix = new int[10][10];
-        for (int i = 0; i < 10; i++){
-            for (int j = 0; j < 10; j++){
-                matrix[i][j] = in.nextInt();
+        int n = in.nextInt();
+        long[] res = new long[n + 1];
+        res[0] = 1;
+        for (int i = 1; i < n + 1; i++){
+            for (int j = n; j >= i; j--){
+                res[j] = res[j] + res[j-i];
+            }
+            if (i == n){
+                System.out.print(res[n] % 1000000000);
+            } else {
+                System.out.print(res[n] % 1000000000 + " ");
             }
         }
-
-
     }
 }
 /*
-
-String.format("%.3f", d )
-
-3
-1 2 3
-0 4 7
-0 0 3
-10 20 6
-
+10
 */

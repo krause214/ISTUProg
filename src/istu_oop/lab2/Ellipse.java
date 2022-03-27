@@ -1,4 +1,4 @@
-package istu_oop_lab2;
+package istu_oop.lab2;
 
 public class Ellipse extends Figure{
     private Double rMin;

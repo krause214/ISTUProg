@@ -1,4 +1,4 @@
-package istu_oop_lab2;
+package istu_oop.lab2;
 
 public class Triangle extends Figure {
     Double h;
