@@ -1,6 +1,8 @@
 package istu_oop.lab3;
 
 
+import java.util.Random;
+
 public class Main {
     public static void main(String args[]) throws Exception {
         MyQueue<Integer> queue = new MyQueue(3);
@@ -8,7 +10,7 @@ public class Main {
             queue.addElement(i);
         }
         try {
-            queue.addElement(5);
+            queue.addElement(new Random().nextInt());
         } catch (Exception e){
             System.out.println(e);
         }

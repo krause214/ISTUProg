@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        ContinuousUniformDistribution distribution = new ContinuousUniformDistribution(200);
+        ContinuousUniformDistribution distribution = new ContinuousUniformDistribution(200, 3, 5);
 
         int w = 640;
         int h = 480;
