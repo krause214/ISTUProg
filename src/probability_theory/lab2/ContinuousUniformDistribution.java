@@ -22,9 +22,9 @@ public class ContinuousUniformDistribution {
         vals = new double[n];
         lenInterval = (double)((b - a) / amountOfInters);
         for (int i = 0; i < n; i++){
-            vals[i] = r.nextDouble() + (Math.abs(r.nextInt()) % (a - b));
+            vals[i] = Math.abs(r.nextDouble() + r.nextInt()) % (b - a) + a;
             for (int j = 1; j < intervals.length + 1; j++){
-                if (vals[i] > lenInterval * j - 1 && vals[i] < lenInterval * j){
+                if (vals[i] > (lenInterval * (j - 1)) + a && vals[i] < lenInterval * j + a){
                     intervals[j - 1]++;
                     break;
                 }
@@ -36,11 +36,11 @@ public class ContinuousUniformDistribution {
         }
 
         for (int i = 0; i < n; i++){
-            if (min > a + vals[i]){
-                min = a + vals[i];
+            if (min > vals[i]){
+                min = vals[i];
             }
-            if (max < a + vals[i]){
-                max = a + vals[i];
+            if (max < vals[i]){
+                max = vals[i];
             }
         }
         lenInterval = (double)((max - min) / amountOfInters);
