@@ -23,7 +23,6 @@ class Bead {
         initPos = (initPos + 1) % len;
     }
 }
-class my
 public class Main {
 
 

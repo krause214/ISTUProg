@@ -45,7 +45,7 @@ public class Distribution {
             }
         }
         for (int i = 0; i < intervals.length; i++){
-            intervals[i] = intervals[i]/(amountOfIters);
+            intervals[i] = intervals[i]/(amountOfIters * lenInterval);
         }
 
     }
