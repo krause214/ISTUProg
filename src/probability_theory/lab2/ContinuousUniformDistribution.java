@@ -16,7 +16,7 @@ public class ContinuousUniformDistribution {
         this.b = b;
         this.min = Double.POSITIVE_INFINITY;
         this.max = Double.NEGATIVE_INFINITY;
-        int amountOfInters = (int)(Math.log(n + 1));
+        int amountOfInters = (int)(Math.log(n + 1)/(Math.log(2)));
         intervals = new double[amountOfInters];
         Random r = new Random();
         vals = new double[n];
@@ -32,7 +32,7 @@ public class ContinuousUniformDistribution {
         }
 
         for (int i = 0; i < intervals.length; i++){
-            intervals[i] = intervals[i]/n;
+            intervals[i] = intervals[i]/(n * lenInterval);
         }
 
         for (int i = 0; i < n; i++){

@@ -24,7 +24,4 @@ public class Ellipse extends Figure{
     public String toString(){
         return getTypeOfFigure() + ": rMin = " + rMin + " rMax = " + rMax + " area = " + getArea();
     }
-
-
-
 }
