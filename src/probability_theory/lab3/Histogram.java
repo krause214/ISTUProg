@@ -1,4 +1,4 @@
-package probability_theory.lab2;
+package probability_theory.lab3;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,9 +9,9 @@ public class Histogram extends JComponent{
     private final int width;
     private final int height;
     private final double[] array;
-    ContinuousUniformDistribution distribution;
+    Distribution distribution;
 
-    public Histogram(int width, int height, ContinuousUniformDistribution distribution){
+    public Histogram(int width, int height, Distribution distribution){
         this.distribution = distribution;
         this.array = distribution.intervals;
         this.width = width;
@@ -32,7 +32,7 @@ public class Histogram extends JComponent{
 
         double xDisplacement = (double)(width / distribution.intervals.length * 0.8);
 
-        double minInVals = distribution.vals[0];
+        double minInVals = distribution.vals.get(0);
         for (double val:
                 distribution.vals) {
             if (val < minInVals){
@@ -79,13 +79,13 @@ public class Histogram extends JComponent{
 
         //assics
 
-            //0y
+        //0y
         Line2D.Double line = new Line2D.Double(30, height - 80, 30 , 0);
         graphics2D.setColor(Color.BLACK);
         graphics2D.draw(line);
         graphics2D.drawString("1", 10, 10);
 
-            //0x
+        //0x
         line = new Line2D.Double(30, height - 80, width , height - 80);
         graphics2D.setColor(Color.BLACK);
         graphics2D.draw(line);
